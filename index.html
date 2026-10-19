@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cyberpunk Snake Ulimate</title>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="bg-grid"></div>
+        <header class="game-header">
+            <div class="score-board">
+                <span class="label">SCORE</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <h1 class="logo">SNAKE<span>_</span>CYBER</h1>
+            <div class="high-score-board">
+                <span class="label">HIGH SCORE</span>
+                <span class="value" id="high-score">0</span>
+            </div>
+        </header>
+
+        <div class="game-are">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+            <div class="menu-overlay" id="menu-overlay">
+                <h2>SELECT MODE</h2>
+                <button class="btn mode-btn" data-mode="classic">CLASSIC</button>
+                <button class="btn mode-btn" data-mode="wrap">WRAP AROUND</button>
+                <button class="btn mode-btn" data-mode="maza">MAZE</button>
+                <p class="controls-hint">Use Arrow Keys or WASD</p>
+            </div>
+
+            <div class="menu-overylay hidden" id="game-over-overlay">
+                <h2 class="glitch-text" data-text="GAME OVER">GAME OVER</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button class="btn" id="restart-btn">PLAY AGAIN</button>
+            </div>
+
+        <div class="mobile-controls">
+            <button class="d-pad" onclick="changeDirection('up')">▲</button>
+            <div class="d-pad-row">
+                <button class="d-pad" onclick="changeDirection('left')">◀</button>
+                <button class="d-pad" onclick="changeDirection('down')">▼</button>
+                <button class="d-pad" onclick="changeDirection('right')">▶</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    </body>
+</html>
